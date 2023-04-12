@@ -3,3 +3,24 @@ font-family: 'Lato', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
 
+.clip_book {
+  background-image: url("https://img.freepik.com/free-photo/vintage-crumpled-paper-textured-background_53876-98332.jpg?size=626&ext=jpg");
+  background-color: var(--Rose) 0.5;
+  background-size: cover;
+  opacity: 50%;
+  height: 14rem;
+  width: 11rem;
+  /* box-sizing: border-box; */
+  margin: 2rem;
+  border-bottom: 0.3rem solid var(--Primery400);
+  border-bottom-left-radius: 50px 10px;
+  border-top-right-radius: 5px 30px;
+  border-right: 0.2rem solid var(--Primery400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+.clip_book:hover {
+  transform: scale(1.2);
+}
