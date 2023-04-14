@@ -18,7 +18,9 @@
   --Purple: #ab92e1;
   --White: #ffff;
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: var(--Peimery);
   padding: 0;

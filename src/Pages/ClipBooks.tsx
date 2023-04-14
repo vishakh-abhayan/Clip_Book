@@ -64,7 +64,7 @@ function ClipBooks(): JSX.Element {
       </form>
       <div className="book_container">
         {clipBooks.map(({ id, label }) => (
-          <Link to="/boards" style={{ textDecoration: "none" }}>
+          <Link to="/boards" style={{ textDecoration: "none", color: "black" }}>
             <div key={id} className="clip_book">
               <h1>{label}</h1>
             </div>
