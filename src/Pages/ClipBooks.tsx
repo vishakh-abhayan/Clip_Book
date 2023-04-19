@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import GithubCorner from "react-github-corner";
 import "./ClipBook.css";
 import { FaBook } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 interface ClipBook {
@@ -64,7 +65,7 @@ function ClipBooks(): JSX.Element {
       </form>
       <div className="book_container">
         {clipBooks.map(({ id, label }) => (
-          <Link to="/boards" style={{ textDecoration: "none" }}>
+          <Link to="/boards" style={{ textDecoration: "none", color: "black" }}>
             <div key={id} className="clip_book">
               <h1>{label}</h1>
             </div>
