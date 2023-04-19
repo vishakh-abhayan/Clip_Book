@@ -1,0 +1,60 @@
+.clip_boards {
+  background: linear-gradient(
+      rgba(167, 206, 254, 0.313),
+      rgba(102, 201, 251, 0.414)
+    ),
+    url("https://img.freepik.com/premium-photo/blue-paper-texture-background-usage-high-resolution-photo_463999-1094.jpg?w=2000");
+  background-size: cover;
+  color: var(--White);
+  height: 3.5rem;
+  width: 22rem;
+  box-sizing: border-box;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.board_container {
+  max-width: 1500px;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  font-family: "Fredericka the Great", cursive;
+
+  font-size: 0.7rem;
+}
+@media (max-width: 850px) {
+  .board_container {
+    max-width: 1000px;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Fredericka the Great", cursive;
+  }
+}
+
+.arrow_back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--Purple);
+}
+.board_edit {
+  position: relative;
+  margin: 5px;
+  right: 0px;
+  margin-left: 60px;
+}
+.board_delete {
+  position: relative;
+  margin: 5px;
+  right: 5px;
+}

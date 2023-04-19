@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import GithubCorner from "react-github-corner";
 import "./ClipBook.css";
 import { FaBook } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 interface ClipBook {
