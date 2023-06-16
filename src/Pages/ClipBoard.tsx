@@ -3,18 +3,24 @@ import { Link } from "react-router-dom";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 import "./ClipBoard.css";
+import { useState, useEffect } from "react";
 
-function ClipBoard() {
-  interface boards {
-    id: number;
-    lable: string;
-  }
-  let clipBoards: boards[] = [
-    { id: 1, lable: "https://helleo.com/hey" },
-    { id: 2, lable: "https://helleo.com/hey" },
-    { id: 3, lable: "https://helleo.com/hey" },
-    { id: 4, lable: "https://helleo.com/hey" },
-  ];
+interface boards {
+  id: number;
+  lable: string;
+}
+
+function ClipBoard(): JSX.Element {
+  const [clipUrl, setClipUrl] = useState<String>("");
+
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    setClipUrl(event.target.value);
+  };
+  useEffect(() => {
+    localStorage.setItem("clipUrl", JSON.stringify(clipUrl));
+  }, [ClipBoard]);
 
   return (
     <div className="book_box">
@@ -27,15 +33,15 @@ function ClipBoard() {
           placeholder="Enter Book name"
           className="book_input"
           type="text"
-          // value={bookName}
-          // onChange={handleInputChange}
+          value={bookName}
+          onChange={handleInputChange}
         ></input>
         <button type="submit" className="input_submit">
           <FaPen size={20} color="#fff" />
         </button>
-        {/* <button type="submit" className="input_submit">
+        <button type="submit" className="input_submit">
           <FaBook size={20} color="#fff" />
-        </button> */}
+        </button>
       </form>
       <div className="board_container">
         {clipBoards.map(({ id, lable }) => (

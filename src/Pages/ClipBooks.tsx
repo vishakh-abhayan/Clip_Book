@@ -5,9 +5,15 @@ import { FaBook } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
+interface clip {
+  id: number;
+  textClip: string;
+}
+
 interface ClipBook {
   id: number;
   label: string;
+  clips: clip[];
 }
 
 function ClipBooks(): JSX.Element {
@@ -32,6 +38,7 @@ function ClipBooks(): JSX.Element {
       const newBook: ClipBook = {
         id: new Date().getTime(),
         label: bookName,
+        clips: [],
       };
       setClipBooks((prevClipBooks) => [...prevClipBooks, newBook]);
       setBookName(""); // Clear input value
